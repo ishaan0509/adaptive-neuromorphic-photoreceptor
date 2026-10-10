@@ -1,4 +1,4 @@
-# ISCAS 2027 Neuromorphic Retina Project — Research and Evidence Dossier
+Error-Constrained Selective Ionic-Current Updates for a Digital Neuromorphic Photoreceptor
 
 **Purpose:** A consolidated, paper-preparation handoff for the project: its research question, model lineage, methods, experiments, results, RTL changes, verification status, limitations, and reproducibility map. This file is intended to make the project understandable from one document. It is not a substitute for the cited paper, raw data, source code, or a final independently reviewed manuscript.
 
