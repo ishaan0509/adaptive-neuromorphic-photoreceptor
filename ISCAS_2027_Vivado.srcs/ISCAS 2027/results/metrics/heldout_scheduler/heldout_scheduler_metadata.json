@@ -1,0 +1,137 @@
+{
+  "seed": null,
+  "deterministic_waveforms": true,
+  "training_suite": [
+    "dark",
+    "step_up",
+    "step_down",
+    "pulse",
+    "repeated_pulses",
+    "ramp",
+    "periodic",
+    "abrupt_transitions",
+    "steady_state"
+  ],
+  "heldout_suite": [
+    "heldout_step_early",
+    "heldout_step_late_down",
+    "heldout_double_pulse",
+    "heldout_triangle_ramp",
+    "heldout_rapid_pulse_train",
+    "heldout_chirped_light"
+  ],
+  "training_not_used_as_heldout": true,
+  "target_max_abs_voltage_error_V": 1e-05,
+  "duration_s": 1.0,
+  "dt_s": 0.0001,
+  "python_model_initial_state": "DEFAULT_PARAMETERS.state_vector()",
+  "current_error_alignment": "currents at sample i applied to state transition producing sample i+1",
+  "voltage_error_alignment": "post-initial states at samples 1..N compared",
+  "voltage_exceedance_comparison": "strict absolute-error > tolerance",
+  "evaluation_count_validation": "exact_current_evaluations equals refresh_mask true count",
+  "full_update_evaluation_denominator": "six current terms evaluated on every model grid sample, including terminal sample",
+  "candidate_configurations": [
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-14;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-14;max_interval=16"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-13;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-13;max_interval=16"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-12;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-12;max_interval=16"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-11;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-11;max_interval=16"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-10;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-10;max_interval=16"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-09;max_interval=4"
+    },
+    {
+      "policy": "per_current_sensitivity",
+      "configuration": "threshold=1e-09;max_interval=16"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=1e-06;max_interval=4"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=1e-06;max_interval=16"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=3e-06;max_interval=4"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=3e-06;max_interval=16"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=1e-05;max_interval=4"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=1e-05;max_interval=16"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=3e-05;max_interval=4"
+    },
+    {
+      "policy": "accumulated_voltage_proxy",
+      "configuration": "budget=3e-05;max_interval=16"
+    }
+  ],
+  "selected_from_training_only": {
+    "per_current_sensitivity": {
+      "configuration": "threshold=1e-14;max_interval=16",
+      "worst_training_max_error_V": 1.3925900697112081e-06,
+      "mean_training_reduction_percent": 57.72607924392745,
+      "target_met_on_training": true
+    },
+    "accumulated_voltage_proxy": {
+      "configuration": "budget=1e-06;max_interval=16",
+      "worst_training_max_error_V": 7.2154884840081035e-06,
+      "mean_training_reduction_percent": 52.381428523814286,
+      "target_met_on_training": true
+    }
+  },
+  "results_csv": "heldout_scheduler_results.csv",
+  "plot": "heldout_scheduler_tradeoff.png",
+  "limitations": [
+    "Observed errors on a provisional Python model are not guaranteed bounds.",
+    "Python function-evaluation reductions do not measure RTL activity or power.",
+    "No biological validation is implied.",
+    "If a policy has no training configuration satisfying the fixed target, its nearest candidate is labeled ineligible."
+  ]
+}

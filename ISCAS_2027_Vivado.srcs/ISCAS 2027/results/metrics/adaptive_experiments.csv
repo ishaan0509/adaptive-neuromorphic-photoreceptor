@@ -1,0 +1,37 @@
+stimulus,scheduler,status,failure_reason,max_abs_voltage_error_vs_full_euler_V,rms_voltage_error_vs_full_euler_V,max_abs_ionic_current_error_vs_full_euler_A,ionic_current_evaluations,ionic_current_evaluations_avoided_percent,all-current_refresh_events,transient_refresh_events,budget_refresh_events,maximum_estimated_voltage_error_V
+dark,full,OK,,0.0,0.0,0.0,60006,0.0,10001,0,0,0.0
+dark,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0594; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+dark,threshold,OK,,1.5942510271912957e-05,3.855076184142224e-06,2.2101490901155763e-12,5796,90.34096590340965,32,0,0,0.0
+dark,budget_empirical,OK,,6.5472641348346405e-06,2.8767088391835846e-06,1.2316040434055534e-12,17556,70.74292570742927,2926,0,2925,9.996592878912696e-06
+step_up,full,OK,,0.0,0.0,0.0,60006,0.0,10001,1,0,0.0
+step_up,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0594; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+step_up,threshold,OK,,6.118707914624932e-05,9.505842566320377e-06,2.2101490901155763e-12,7073,88.21284538212846,48,1,0,0.0
+step_up,budget_empirical,OK,,6.457678575141901e-06,1.014307089586874e-06,1.4383607863365862e-12,11922,80.13198680131987,1987,1,1624,9.99542429274226e-06
+step_down,full,OK,,0.0,0.0,0.0,60006,0.0,10001,1,0,0.0
+step_down,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.4704; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+step_down,threshold,OK,,6.217537107297555e-05,1.0719570717895083e-05,2.1516605834082005e-12,6751,88.74945838749458,32,1,0,0.0
+step_down,budget_empirical,OK,,6.460278487989413e-06,2.20550865698242e-06,1.370454374427939e-12,15942,73.43265673432657,2657,1,2525,9.999075158857698e-06
+pulse,full,OK,,0.0,0.0,0.0,60006,0.0,10001,2,0,0.0
+pulse,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0594; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+pulse,threshold,OK,,6.353023803505609e-05,1.0421629902569136e-05,2.2101490901155763e-12,9100,84.8348498483485,43,2,0,0.0
+pulse,budget_empirical,OK,,6.466800714526044e-06,2.421902489814878e-06,1.4359518662694903e-12,21504,64.16358364163584,3584,2,3568,9.999524651883533e-06
+repeated_pulses,full,OK,,0.0,0.0,0.0,60006,0.0,10001,8,0,0.0
+repeated_pulses,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0554; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+repeated_pulses,threshold,OK,,7.519504016555156e-05,2.1441292486820493e-05,2.2101490901155763e-12,19431,67.61823817618237,103,8,0,0.0
+repeated_pulses,budget_empirical,OK,,6.466260527693279e-06,1.599226821320097e-06,1.4435137719432513e-12,37398,37.67623237676232,6233,8,6224,9.997225382316474e-06
+ramp,full,OK,,0.0,0.0,0.0,60006,0.0,10001,4000,0,0.0
+ramp,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0594; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+ramp,threshold,OK,,2.0617755295132545e-05,2.052420538154219e-06,2.2101490901155763e-12,27600,54.004599540045994,4033,4000,0,0.0
+ramp,budget_empirical,OK,,3.213789776103371e-05,7.847523231416537e-06,1.5222768527196657e-12,18774,68.71312868713129,3129,0,2849,9.99355057130677e-06
+periodic,full,OK,,0.0,0.0,0.0,60006,0.0,10001,10000,0,0.0
+periodic,periodic,OK,,0.0,0.0,0.0,60006,0.0,10001,10000,0,0.0
+periodic,threshold,OK,,0.0,0.0,0.0,60006,0.0,10001,10000,0,0.0
+periodic,budget_empirical,OK,,5.157905619573855e-05,2.095227140691918e-05,1.881421990888403e-12,34452,42.585741425857414,5742,0,5741,9.999094884070978e-06
+abrupt_transitions,full,OK,,0.0,0.0,0.0,60006,0.0,10001,2,0,0.0
+abrupt_transitions,periodic,UNSTABLE,"Voltage exceeded the 1 V numerical runaway guard at t=0.0594; this is a numerical safeguard, not a physiological limit",,,,,,,,,
+abrupt_transitions,threshold,OK,,6.118707914624932e-05,1.0451048934496912e-05,2.2101490901155763e-12,9164,84.72819384728194,49,2,0,0.0
+abrupt_transitions,budget_empirical,OK,,6.457678575141901e-06,2.344885936925803e-06,1.4383607863365862e-12,21246,64.5935406459354,3541,2,3524,9.99958239103422e-06
+steady_state,full,OK,,0.0,0.0,0.0,60006,0.0,10001,0,0,0.0
+steady_state,periodic,OK,,0.004544873754399478,0.00011913698811949632,2.4707313314462247e-10,12006,79.99200079992,2001,0,0,0.0
+steady_state,threshold,OK,,6.217537107297555e-05,1.0175834397120597e-05,2.1516605834082005e-12,4747,92.08912442089124,23,0,0,0.0
+steady_state,budget_empirical,OK,,2.5267192225175705e-06,3.0837338779532117e-07,1.370454374427939e-12,6336,89.44105589441055,1056,0,572,9.991074112372734e-06

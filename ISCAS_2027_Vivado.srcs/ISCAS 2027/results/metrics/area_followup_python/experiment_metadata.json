@@ -1,0 +1,42 @@
+{
+  "run_date": "2026-10-10",
+  "source_script": "run_adaptive_experiments.py",
+  "evidence_type": "assistant-run Python model experiment",
+  "biological_validation": false,
+  "parameters": {
+    "duration_s": 1.0,
+    "dt_s": 0.0001,
+    "time_grid_points": 10001,
+    "ionic_current_terms": 6,
+    "random_seed": null
+  },
+  "stimuli": [
+    "dark",
+    "step_up",
+    "step_down",
+    "pulse",
+    "repeated_pulses",
+    "ramp",
+    "periodic",
+    "abrupt_transitions",
+    "steady_state"
+  ],
+  "scheduler_configuration": {
+    "full": {"mode": "full"},
+    "periodic": {"mode": "periodic", "periodic_interval": 4, "max_interval": 16},
+    "threshold": {"mode": "threshold", "current_error_threshold_A": 1e-12, "max_interval": 16},
+    "budget_empirical": {"mode": "budget", "voltage_error_budget_V": 1e-5, "max_interval": 16, "transition_tolerance": 0.01}
+  },
+  "results_csv": "adaptive_experiments.csv",
+  "scenario_mode_rows": 36,
+  "full_update_current_function_evaluations_per_scenario": 60006,
+  "summary": {
+    "periodic_unstable_count": 7,
+    "threshold_max_observed_voltage_error_V": 7.519504016555156e-05,
+    "threshold_python_function_evaluation_reduction_percent_range": [0.0, 92.08912442089124],
+    "budget_empirical_max_observed_voltage_error_V": 5.157905619573855e-05,
+    "budget_empirical_python_function_evaluation_reduction_percent_range": [37.67623237676232, 89.44105589441055],
+    "budget_empirical_estimate_exceeded_by_observed_trajectory_error": true,
+    "tolerance_exceedance_fraction_reported": false
+  }
+}

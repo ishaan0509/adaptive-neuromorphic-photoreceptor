@@ -1,0 +1,26 @@
+# Python environments, caches, and bytecode
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+*.py[cod]
+
+# Vivado generated run/simulation state
+.Xil/
+**/.Xil/
+*.jou
+*.log
+*.str
+*.wdb
+*.pb
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+
+# Local editor configuration and temporary output
+.vscode/
+out.txt

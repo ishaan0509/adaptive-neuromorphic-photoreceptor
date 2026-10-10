@@ -1,0 +1,117 @@
+{
+  "run_date": "2026-10-10",
+  "source_script": "run_budget_sweep.py",
+  "evidence_type": "assistant-run Python model experiment",
+  "biological_validation": false,
+  "hardware_activity_measured": false,
+  "duration_s": 1.0,
+  "dt_s": 0.0001,
+  "time_grid_points": 10001,
+  "post_initial_state_samples_per_stimulus": 10000,
+  "stimuli": [
+    "dark",
+    "step_up",
+    "step_down",
+    "pulse",
+    "repeated_pulses",
+    "ramp",
+    "periodic",
+    "abrupt_transitions",
+    "steady_state"
+  ],
+  "empirical_budget_triggers_V": [
+    0.000001,
+    0.00001,
+    0.0001
+  ],
+  "max_interval_samples": [
+    4,
+    16
+  ],
+  "observed_error_thresholds_V": [
+    0.00001,
+    0.00005,
+    0.0001
+  ],
+  "scenario_configuration_rows": 54,
+  "stable_rows": 54,
+  "full_update_ionic_current_function_evaluations_per_stimulus": 60006,
+  "full_update_ionic_current_function_evaluations_per_nine_stimuli": 540054,
+  "observed_summary_by_budget_and_max_interval": [
+    {
+      "budget_trigger_V": 0.000001,
+      "max_interval_samples": 4,
+      "max_observed_voltage_error_V": 7.2154884840081035e-06,
+      "max_per_stimulus_rms_voltage_error_V": 9.37084555e-07,
+      "samples_over_10uV": 0,
+      "samples_over_50uV": 0,
+      "samples_over_100uV": 0,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 48.962881
+    },
+    {
+      "budget_trigger_V": 0.000001,
+      "max_interval_samples": 16,
+      "max_observed_voltage_error_V": 7.2154884840081035e-06,
+      "max_per_stimulus_rms_voltage_error_V": 9.37084555e-07,
+      "samples_over_10uV": 0,
+      "samples_over_50uV": 0,
+      "samples_over_100uV": 0,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 52.381429
+    },
+    {
+      "budget_trigger_V": 0.00001,
+      "max_interval_samples": 4,
+      "max_observed_voltage_error_V": 5.150651582078169e-05,
+      "max_per_stimulus_rms_voltage_error_V": 2.0826167316e-05,
+      "samples_over_10uV": 5780,
+      "samples_over_50uV": 22,
+      "samples_over_100uV": 0,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 61.682721
+    },
+    {
+      "budget_trigger_V": 0.00001,
+      "max_interval_samples": 16,
+      "max_observed_voltage_error_V": 5.157905619573855e-05,
+      "max_per_stimulus_rms_voltage_error_V": 2.0953318994e-05,
+      "samples_over_10uV": 5903,
+      "samples_over_50uV": 23,
+      "samples_over_100uV": 0,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 65.720095
+    },
+    {
+      "budget_trigger_V": 0.0001,
+      "max_interval_samples": 4,
+      "max_observed_voltage_error_V": 0.0003018930386531615,
+      "max_per_stimulus_rms_voltage_error_V": 8.0273718853e-05,
+      "samples_over_10uV": 34386,
+      "samples_over_50uV": 9277,
+      "samples_over_100uV": 3598,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 73.99149
+    },
+    {
+      "budget_trigger_V": 0.0001,
+      "max_interval_samples": 16,
+      "max_observed_voltage_error_V": 0.0003083057820366941,
+      "max_per_stimulus_rms_voltage_error_V": 0.000110214371224,
+      "samples_over_10uV": 40283,
+      "samples_over_50uV": 11344,
+      "samples_over_100uV": 5637,
+      "total_state_samples": 90000,
+      "weighted_python_function_evaluation_reduction_percent": 79.152085
+    }
+  ],
+  "limitations": [
+    "The voltage-error budget is a heuristic refresh trigger, not a proven upper bound.",
+    "Evaluation reductions count Python function calls and do not measure RTL switching or power.",
+    "The six RTL ionic-current modules remain combinational and compute continuously.",
+    "Only the fixed built-in stimulus amplitude and timing suite was tested.",
+    "No HDL simulation, synthesis, timing, or power tool was run.",
+    "The model remains provisional and has not been biologically validated."
+  ],
+  "results_csv": "empirical_budget_sweep.csv"
+}

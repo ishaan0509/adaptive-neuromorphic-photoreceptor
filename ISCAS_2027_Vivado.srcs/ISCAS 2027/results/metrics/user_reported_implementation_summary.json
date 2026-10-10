@@ -1,0 +1,51 @@
+{
+  "evidence_type": "user-supplied screenshot transcription",
+  "run_date": "2026-10-10",
+  "top": "photoreceptor_top",
+  "parameter_values": {
+    "baseline": {"ADAPTIVE_ENABLE": 0},
+    "adaptive": {"ADAPTIVE_ENABLE": 1}
+  },
+  "raw_reports_available": false,
+  "exact_part_constraints_clock_and_power_activity_source_verified": false,
+  "available_luts_reported": 20800,
+  "reported": {
+    "baseline": {
+      "total_power_W": 0.863,
+      "dynamic_power_W": 0.791,
+      "device_static_power_W": 0.072,
+      "power_confidence": "low",
+      "luts": 16348,
+      "flip_flops": 283,
+      "dsp_blocks": 71,
+      "io_blocks": 125
+    },
+    "adaptive": {
+      "total_power_W": 0.899,
+      "dynamic_power_W": 0.827,
+      "device_static_power_W": 0.072,
+      "power_confidence": "low",
+      "luts": 28226,
+      "flip_flops": 701,
+      "dsp_blocks": 71,
+      "io_blocks": 125
+    }
+  },
+  "adaptive_delta_percent": {
+    "total_power": 4.171494785631522,
+    "dynamic_power": 4.551201011377993,
+    "luts": 72.65720577440665,
+    "flip_flops": 147.70318021201413
+  },
+  "capacity_assessment": {
+    "baseline_lut_utilization_percent": 78.59615384615384,
+    "baseline_lut_headroom": 4452,
+    "adaptive_lut_utilization_percent": 135.70192307692307,
+    "adaptive_luts_over_capacity": 7426
+  },
+  "limitations": [
+    "Power estimates are marked low confidence.",
+    "No physical power saving or increase is established by this screenshot alone.",
+    "An earlier report gave a conflicting baseline LUT count of 27673; the runs are not reconciled."
+  ]
+}
